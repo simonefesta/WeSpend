@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+/*
+ * Copyright 2020 Simone Festa
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="logic.view.PayHistoryViewController">
+   <children>
+      <TableView fx:id="tableID" layoutX="580.0" layoutY="65.0" prefHeight="70.0" prefWidth="153.0">
+        <columns>
+          <TableColumn fx:id="iPrice" editable="false" prefWidth="150.0" resizable="false" text="Budget" />
+        </columns>
+      </TableView>
+      
+   </children>
+</AnchorPane>

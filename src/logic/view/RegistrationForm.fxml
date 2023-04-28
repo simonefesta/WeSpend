@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+/*
+ * Copyright 2020 Alessandro Fato & Simone Festa
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="logic.view.RegistrationFormViewController">
+   <children>
+      <TextField fx:id="userField" layoutX="228.0" layoutY="150.0" prefHeight="30.0" prefWidth="300.0" />
+      <TextField fx:id="depositField" layoutX="228.0" layoutY="190.0" prefHeight="30.0" prefWidth="300.0" />
+      
+      <PasswordField fx:id="passFieldOne" layoutX="228.0" layoutY="230.0" prefHeight="30.0" prefWidth="300.0" />
+      <PasswordField fx:id="passFieldTwo" layoutX="228.0" layoutY="270.0" prefHeight="30.0" prefWidth="300.0" />
+      <Button fx:id="registrationButton" layoutX="250.0" layoutY="330.0" onAction="#handleRegistrationButtonAction" prefHeight="30.0" prefWidth="100.0" text="Register">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+         
+      <Text layoutX="95.0" layoutY="172.0" text="Username" >
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="85.0" layoutY="211.0" text="Start deposit" >
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="96.0" layoutY="251.0" text="Password" >
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="64.0" layoutY="292.0" text="Repeat password" textAlignment="CENTER" >
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="114.0" fitWidth="115.0" layoutX="135.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img-wespendlogo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="259.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="weSpend">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="270.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration form">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="goBack" onAction="#handleGoBack" prefHeight="27.0" prefWidth="38.0">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img-goback.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

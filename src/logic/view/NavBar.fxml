@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright 2020 Alessandro Fato
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="vbox" prefHeight="400" prefWidth="800"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="logic.view.NavBarController">
+	<MenuBar fx:id="menuBar">
+    	<menus>
+        <Menu text="New">
+        	<items>
+            	<MenuItem text="Transaction" onAction="#handleNewTransaction"/>
+            </items>
+       	</Menu>
+        <Menu text="View">
+        	<items>
+            	<MenuItem text="Transaction list" onAction="#handleListTr"/>
+               	<MenuItem text="Pending" onAction="#handlePending"/>
+               
+            </items>
+        </Menu>
+        <Menu text="Goal">
+        	<items>
+             	<MenuItem text="View goal" onAction="#handleViewGoal"/>
+            </items>
+        </Menu>
+        <Menu text="Account">
+        	<items>
+             	<MenuItem fx:id="usernameField"/>
+               	<SeparatorMenuItem />
+               	<MenuItem text="Exit" onAction="#handleExit"/>
+            </items>
+        </Menu>        
+      	</menus>
+   	</MenuBar>
+</VBox>

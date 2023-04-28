@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright 2020 Simone Festa
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="logic.view.ViewTransactionController">
+   <fx:include source="NavBar.fxml"/> 
+       <fx:include source="PaymentResult.fxml"/>
+      <fx:include source="ListGraph.fxml"/> 
+       
+   <children>
+      <TableView fx:id="tableID" layoutY="30.0" prefHeight="460.0" prefWidth="505.0">
+        <columns>
+        
+		  <TableColumn fx:id="iDate" prefWidth="150.0" text="Date" />
+          <TableColumn fx:id="iName" prefWidth="100.0" text="Type" />
+		  <TableColumn fx:id="iPrice" prefWidth="85.0" text="Price" />
+          <TableColumn fx:id="iComment" prefWidth="150.0" text="Notes" />
+            
+        </columns>
+      </TableView>
+  
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright 2020 Alessandro Fato
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+
+<GridPane fx:controller="logic.view.AddDebtViewController"
+          xmlns:fx="http://javafx.com/fxml">
+
+  	<fx:include source="TransactionInfo.fxml"/> 
+ 	<fx:include source="NavBar.fxml"
+ 				GridPane.rowIndex="0" GridPane.columnIndex="0"/> 
+ 					 
+	<ListView fx:id="userListView" minWidth = "250" maxWidth = "250"
+								   minHeight = "250" maxHeight = "250">
+		<GridPane.margin><Insets top="-35" left="490"/></GridPane.margin>
+	</ListView> 
+    
+    <Label text="Select a friend">
+    		<GridPane.margin><Insets top="-305" left="495"/></GridPane.margin>
+    </Label>
+
+    <Label text="Create a debt">
+    		<GridPane.margin><Insets top="-300" left="300"/></GridPane.margin>
+    		<font><Font size="16.0"/></font>
+    </Label>
+    
+    <Button onAction="#handleSubmitButtonAction" fx:id="submitButton" text="Create">
+    		<GridPane.margin><Insets top="80" left="10"/></GridPane.margin>
+    </Button>
+
+    <Button onAction="#handleCancelButtonAction" fx:id="submitButton" text="Cancel">
+    		<GridPane.margin><Insets top="80" left="90"/></GridPane.margin>
+    </Button>
+      
+    <Label fx:id="debtUser" GridPane.halignment="LEFT">
+    	<GridPane.margin><Insets top="235" left="10"/></GridPane.margin>
+    </Label>
+
+    <Label fx:id="shareUser" GridPane.halignment="LEFT">
+    	<GridPane.margin><Insets top="235" left="250"/></GridPane.margin>
+    </Label>
+
+    <Button onAction="#handleSharedButtonAction" fx:id="shareButton" text="Divide expense">
+     		<GridPane.margin><Insets top="265" left="505"/></GridPane.margin>
+    </Button>
+      
+    <Button onAction="#handleSelectFriendsButtonAction" fx:id="selectFriendButton" text="Select friend">
+    		<GridPane.margin><Insets top="265" left="630"/></GridPane.margin>
+    </Button>
+    
+</GridPane>

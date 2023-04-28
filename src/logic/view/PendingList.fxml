@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Copyright 2020 Simone Festa
+ *
+ * This file is a part of weSpend project developed for the course
+ * ISPW (A.Y. 2019-2020) at Università di Tor Vergata in Rome
+ */ 
+ -->
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="logic.view.PendingViewController">
+   <fx:include source="NavBar.fxml"/> 
+   <children>
+      <TableView fx:id="tableID" layoutY="30.0" prefHeight="500.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="iID" prefWidth="1.0" text="" />
+		  <TableColumn fx:id="iDate" prefWidth="150.0" text="Date" />
+          <TableColumn fx:id="iName" prefWidth="105.0" text="Type" />
+		  <TableColumn fx:id="iPrice" prefWidth="100.0" text="Price" />
+          <TableColumn fx:id="iUser" prefWidth="100.0" text="Created by" />
+          <TableColumn fx:id="iComment" prefWidth="160.0" text="Notes" />
+          
+            
+        </columns>
+      </TableView>
+      <Button onAction="#accept" layoutX="650.0" layoutY="146.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="119.0" text="Accept" />
+      <Button onAction="#decline" layoutX="650.0" layoutY="215.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="119.0" text="Decline" />
+   </children>
+</AnchorPane>
