@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="logic.ab.view.ViewController">
+ 	<fx:include source="../../view/NavBar.fxml"/>
+   <children>
+      <Text layoutX="361.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0.0 , 0 );" text="Goal Page">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search" layoutX="27.0" layoutY="38.0" onAction="#searchEnter" promptText="Search" />
+      <SplitPane dividerPositions="0.78" focusTraversable="false" layoutY="67.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="433.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minWidth="638.0" prefHeight="433.0" prefWidth="638.0">
+               <children>
+                  <Button fx:id="addMoney" layoutX="12.0" layoutY="200.0" mnemonicParsing="false" onAction="#showAddMoneyForm" text="Add Money" visible="false" />
+                  <Text fx:id="title" layoutX="12.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="moneyGoal" layoutX="16.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="78">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                  <Button fx:id="refresh" layoutX="12.0" layoutY="142.0" mnemonicParsing="false" onAction="#refreshGoal" text="Refresh" visible="false" />
+                  <LineChart fx:id="grafico" layoutX="130.0" nodeOrientation="LEFT_TO_RIGHT" style="-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0.0 , 0 );">
+                    <xAxis>
+                      <NumberAxis forceZeroInRange="false" label="Time" prefWidth="443.0" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Budget" side="RIGHT" />
+                    </yAxis>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </LineChart>
+                  <Button fx:id="deleteGoalButton" layoutX="12.0" layoutY="379.0" mnemonicParsing="false" onAction="#deleteGoal" text="Delete" visible="false" />
+                  <Text layoutX="16.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":Name" />
+                  <Text layoutX="15.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":Goal" />
+                  <ProgressIndicator fx:id="progress" layoutX="62.0" layoutY="143.0" prefHeight="40.0" prefWidth="51.0" progress="0.0" visible="false" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="listOfGoal" minWidth="150.0" nodeOrientation="LEFT_TO_RIGHT">
+               <children>
+                  <ListView fx:id="list1" onMouseClicked="#onClick" prefHeight="433.0" prefWidth="154.0" />
+                  <Button fx:id="refreshGoals" layoutX="111.0" layoutY="388.0" mnemonicParsing="false" onAction="#refreshGoals" prefHeight="25.0" prefWidth="24.0" />
+                  <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="112.0" layoutY="392.0">
+                     <image>
+                        <Image url="@refresh.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="noGoalText" layoutX="3.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No goals, add it!" visible="false" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <Button fx:id="addGoal" layoutX="1.0" layoutY="38.0" mnemonicParsing="false" onAction="#showAddGoal" text="+" />
+      <StackPane fx:id="pannello2" layoutX="160.0" layoutY="60.0" prefHeight="300.0" prefWidth="500.0" visible="false">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0.0 , 0 );">
+               <children>
+                  <Text layoutX="203.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Goal" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="newGoalLink" editable="false" layoutX="68.0" layoutY="216.0" />
+                  <TextField fx:id="newGoalNome" layoutX="68.0" layoutY="111.0" />
+                  <TextField fx:id="newGoalSoldi" layoutX="68.0" layoutY="162.0" />
+                  <Button fx:id="newGoalButtonInserisci" layoutX="350.0" layoutY="216.0" mnemonicParsing="false" onAction="#newGoalInserisci" text="Insert" />
+                  <Text layoutX="68.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Text layoutX="70.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                  <Text layoutX="68.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Link" />
+                  <TextArea fx:id="newGoalDescrizione" layoutX="273.0" layoutY="110.0" prefHeight="75.0" prefWidth="200.0" />
+                  <Text layoutX="273.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                  <CheckBox fx:id="checkBoxLink" layoutX="70.0" layoutY="246.0" mnemonicParsing="false" onAction="#checkLink" text="Linked" />
+                  <RadioButton fx:id="checkAmazon" layoutX="142.0" layoutY="246.0" mnemonicParsing="false" text="Amazon" visible="false" />
+                  <RadioButton fx:id="checkEbay" layoutX="142.0" layoutY="269.0" mnemonicParsing="false" text="Ebay" visible="false" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <StackPane fx:id="pannelloAddMoney" layoutX="220.0" layoutY="120.0" prefHeight="219.0" prefWidth="355.0" visible="false">
+         <children>
+            <Pane prefHeight="227.0" prefWidth="385.0" style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0.0 , 0 ); -fx-background-radius: 15;">
+               <children>
+                  <TextField fx:id="insertMoney" alignment="CENTER" layoutX="42.0" layoutY="78.0" prefHeight="89.0" prefWidth="200.0" promptText="00.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <Text layoutX="103.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Money" textAlignment="CENTER" wrappingWidth="148">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="addMoneyHistoryButton" layoutX="252.0" layoutY="78.0" mnemonicParsing="false" onAction="#addHistory" prefHeight="89.0" prefWidth="89.0" text="+">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</Pane>
