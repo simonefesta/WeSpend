@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<web-app id="weSpend" version="3.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+    http://java.sun.com/xml/ns/j2ee/weSpend_1.xsd">
+<!-- LoginForm.jsp -->
+  <servlet>
+    <servlet-name>LoginFormServlet</servlet-name>
+    <servlet-class>logic.view.servlet.LoginFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginFormServlet</servlet-name>
+    <url-pattern>/LoginFormServlet</url-pattern>
+  </servlet-mapping>
+<!-- RegistrationForm.jsp -->
+  <servlet>
+    <servlet-name>RegistrationFormServlet</servlet-name>
+    <servlet-class>logic.view.servlet.RegistrationFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationFormServlet</servlet-name>
+    <url-pattern>/RegistrationFormServlet</url-pattern>
+  </servlet-mapping>
+<!-- AddTransaction.jsp -->
+  <servlet>
+    <servlet-name>AddTransactionFormServlet</servlet-name>
+    <servlet-class>logic.view.servlet.AddTransactionFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddTransactionFormServlet</servlet-name>
+    <url-pattern>/AddTransactionFormServlet</url-pattern>
+  </servlet-mapping>
+<!-- DeleteTransactionServlet -->
+  <servlet>
+    <servlet-name>DeleteTransactionServlet</servlet-name>
+    <servlet-class>logic.view.servlet.DeleteTransactionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteTransactionServlet</servlet-name>
+    <url-pattern>/DeleteTransactionServlet</url-pattern>
+  </servlet-mapping>
+<!-- LogoutServlet -->
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>logic.view.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+<!-- AddDebtForm.jsp -->
+  <servlet>
+    <servlet-name>AddDebtFormServlet</servlet-name>
+    <servlet-class>logic.view.servlet.AddDebtFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDebtFormServlet</servlet-name>
+    <url-pattern>/AddDebtFormServlet</url-pattern>
+  </servlet-mapping> 
+<!-- SharedExpenseForm.jsp -->
+  <servlet>
+    <servlet-name>SharedExpenseFormServlet</servlet-name>
+    <servlet-class>logic.view.servlet.SharedExpenseFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SharedExpenseFormServlet</servlet-name>
+    <url-pattern>/SharedExpenseFormServlet</url-pattern>
+  </servlet-mapping>
+<!-- GoalPage.jsp -->
+  <servlet>
+    <servlet-name>GoalServlet</servlet-name>
+    <servlet-class>logic.ab.servlet.GoalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoalServlet</servlet-name>
+    <url-pattern>/GoalServlet</url-pattern>
+  </servlet-mapping>
+<!-- GaolPage.jsp -->
+  <servlet>
+    <servlet-name>AddMoneyServlet</servlet-name>
+    <servlet-class>logic.ab.servlet.AddMoneyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddMoneyServlet</servlet-name>
+    <url-pattern>/AddMoneyServlet</url-pattern>
+  </servlet-mapping>
+<!-- GaolPage.jsp -->
+  <servlet>
+    <servlet-name>DeleteGoalServlet</servlet-name>
+    <servlet-class>logic.ab.servlet.DeleteGoalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteGoalServlet</servlet-name>
+    <url-pattern>/DeleteGoalServlet</url-pattern>
+  </servlet-mapping> 
+<!-- GaolPage.jsp -->
+  <servlet>
+    <servlet-name>RefreshServlet</servlet-name>
+    <servlet-class>logic.ab.servlet.RefreshServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RefreshServlet</servlet-name>
+    <url-pattern>/RefreshServlet</url-pattern>
+  </servlet-mapping> 
+<!-- GoogleCharts.jsp -->
+  <servlet>
+    <servlet-name>ChartServlet</servlet-name>
+    <servlet-class>logic.view.servlet.ChartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChartServlet</servlet-name>
+    <url-pattern>/ChartServlet</url-pattern>
+  </servlet-mapping> 
+<!-- ViewTransactionForm.jsp -->
+  <servlet>
+    <servlet-name>ListTransactionServlet</servlet-name>
+    <servlet-class>logic.view.servlet.ListTransactionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListTransactionServlet</servlet-name>
+    <url-pattern>/ListTransactionServlet</url-pattern>
+  </servlet-mapping> 
+<!-- ViewPending.jsp -->
+  <servlet>
+    <servlet-name>PendingServlet</servlet-name>
+    <servlet-class>logic.view.servlet.PendingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PendingServlet</servlet-name>
+    <url-pattern>/PendingServlet</url-pattern>
+  </servlet-mapping> 
+</web-app>
